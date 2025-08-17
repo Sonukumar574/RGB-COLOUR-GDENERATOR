@@ -1,60 +1,79 @@
-body {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    place-items: center;
-    height: 100vh;
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
 }
 
-.main {
-    height: 400px;
-    width: 250px;
-    background: #333;
-    border-radius: 10px;
-    display: grid;
-    place-items: center;
-    color: #fff;
-    font-family: verdana;
+html,body{
+    height: 100%;
+    width:  100%;
 }
-
-#box {
-    height: 40px;
-    width: 80%;
-    border: none;
-    outline: none;
-    outline: none;
-    border-radius: 50px;
+#main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    background-color: aqua
+}
+#text{
+    color: red;
+    text-align: center;
+    margin-bottom: 600px;
+    margin-left: 50px;
+}
+#square{
+    height: 500px;
+    width: 500px;
+    background-color: aqua;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-small;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-right: 100px;
+}
+#text2{
+    color: red;
     text-align: center;
 }
-
-
-/* CSS property for slider */
-input[type="range"] {
-    -webkit-appearance: none;
-    height: 10px;
-    width: 80%;
-    border-radius: 50px;
-    outline: none;
+#special-img{
+    max-height: 300px;
+    max-width: 250px;
+    display: block;
+    border-radius: 10px;
 }
-
-/* CSS property for slider thumb */
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: 25px;
-    width: 25px;
-    background: #fff;
-    border-radius: 50%;
-    cursor: pointer;
+#circle{
+    height: 300px;
+    width: 150px;
+    background-color: antiquewhite;
+    margin-left: 80%;
+    margin-bottom: 300px;
+    border: 2px solid black;
+    border-radius: 20px;
+    position: absolute;
 }
-
-.main #red {
-    background: linear-gradient(90deg, #000, red);
+#gif{
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+    
 }
-
-.main #green {
-    background: linear-gradient(90deg, #000, green);
+.class{
+    background-color: transparent;
 }
+#contaner{
+    height: 300px;
+    width: 150px;
+    margin-left: 80%;
+    margin-top: 400px;
+    border: 2px solid black;
+    border-radius: 20px;
+    position: absolute;
 
-.main #blue {
-    background: linear-gradient(90deg, #000, blue);
+}
+#special2-img{
+    max-height: 300px;
+    max-width: 250px;
+    display: block;
 }

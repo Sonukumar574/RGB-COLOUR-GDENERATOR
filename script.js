@@ -1,39 +1,23 @@
-function myColour() {
+const box = document.getElementById("text");
 
-    // Get the value of red color
-    var red = document.getElementById('red').value;
+// Step 1: Store original text
+const originalText = box.innerText.trim();
 
-    // Get the value of green color
-    var green = document.getElementById('green').value;
+// Step 2: Clear the box
+box.innerText = "";
 
-    // Get the value of blue color
-    var blue = document.getElementById('blue').value;
+// Step 3: Split into words
+const words = originalText.split(" ");
+let i = 0;
 
-    // rgb() function is used to create the color
-    // from red, green and blue values
-    var colour = 'rgb(' + red + ',' + green + ',' + blue + ')';
-
-    // Change background colour with the 
-    // color obtained by rgb function
-    document.body.style.backgroundColor = colour;
-
-    // Set the obtained rgb() colour code in the
-    // input text field having id=box  
-    document.getElementById('box').value = colour;
-
+// Step 4: Typing function
+function typeWord() {
+  if (i < words.length) {
+    box.innerHTML += words[i] + " ";
+    i++;
+    setTimeout(typeWord, 800); // Adjust speed here
+  }
 }
 
-// On changing red range slider myColour()
-// function is called  
-document.getElementById('red')
-    .addEventListener('input', myColour);
-
-// On changing green range slider myColour()
-// function is called
-document.getElementById('green')
-    .addEventListener('input', myColour);
-
-// On changing blue range slider myColour()
-// function is called
-document.getElementById('blue')
-    .addEventListener('input', myColour);
+// Start typing
+typeWord(); 
